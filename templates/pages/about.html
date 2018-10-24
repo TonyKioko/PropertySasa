@@ -18,7 +18,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="index.html">
+            <a href="{% url 'index' %}">
               <i class="fas fa-home"></i> Home</a>
           </li>
           <li class="breadcrumb-item active"> About</li>
@@ -40,7 +40,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img class="card-img-top" src="assets/img/realtors/kyle.jpg" alt="Seller of the month">
+            <img class="card-img-top" src="{% static 'img/realtors/kyle.jpg' %}" alt="Seller of the month">
             <div class="card-body">
               <h5 class="card-title">Seller Of The Month</h5>
               <h6 class="text-secondary">Kyle Brown</h6>
