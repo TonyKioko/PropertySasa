@@ -1,15 +1,15 @@
 from django.db import models
-form datetime import datetime
+from datetime import datetime
 from realtors.models import Realtor
 # Create your models here.
 
 class Listing(models.Model):
     realtor = models.ForeignKey(Realtor,on_delete=models.DO_NOTHING)
-    title = models.CharField(max_lenght=80)
-    city = models.CharField(max_lenght=80)
-    county = models.CharField(max_lenght=80)
-    address = models.CharField(max_lenght=80)
-    description = models.TextField(max_lenght=400,blank=True)
+    title = models.CharField(max_length=80)
+    city = models.CharField(max_length=80)
+    county = models.CharField(max_length=80)
+    address = models.CharField(max_length=80)
+    description = models.TextField(max_length=400,blank=True)
     price = models.PositiveIntegerField()
     bedrooms = models.PositiveIntegerField()
     bathrooms = models.DecimalField(max_digits=2,decimal_places=1)
