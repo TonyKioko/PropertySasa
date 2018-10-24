@@ -1,5 +1,6 @@
 {%extends 'base.html'%}
 {% load static%}
+{% load humanize %}
 
 {% block content %}
 
@@ -38,9 +39,12 @@
  <!-- Listing 1 -->
  <div class="col-md-6 col-lg-4 mb-4">
    <div class="card listing-preview">
+     {% if listing.photo_main%}
+     <img class="card-img-top" src="{{listing.photo_main.url}}" alt="">
+{% endif %}
      <div class="card-img-overlay">
        <h2>
-         <span class="badge badge-secondary text-white">$490,000</span>
+         <span class="badge badge-secondary text-white">Ksh {{listing.price | intcomma}}</span>
        </h2>
      </div>
      <div class="card-body">
