@@ -32,7 +32,7 @@ county_choices ={
 'Baringo':'Baringo County',
 'Bomet':'Bomet County',
 'Bungoma':'Bungoma County',
-'Busia','Busia County',
+'Busia':'Busia County',
 'Elgeyo Marakwet':'Elgeyo Marakwet County',
 'Embu':'Embu County',
 'Garissa':'Garissa County',
