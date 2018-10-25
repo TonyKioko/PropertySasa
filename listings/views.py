@@ -30,6 +30,9 @@ def search(request):
         county = request.GET['county']
         if county:
             queryset_list=queryset_list.filter(county__icontains=county)
-
+    if 'bedrooms' in request.GET:
+        bedrooms = request.GET['bedrooms']
+        if bedrooms:
+            queryset_list=queryset_list.filter(bedrooms__lte=bedrooms)
     context = {"price_choices":price_choices,"bedroom_choices":bedroom_choices,"county_choices":county_choices,"listings":queryset_list}
     return render(request,'listings/search.html',context)
