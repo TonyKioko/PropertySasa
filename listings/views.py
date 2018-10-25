@@ -22,6 +22,14 @@ def search(request):
         keywords = request.GET['keywords']
         if keywords:
             queryset_list=queryset_list.filter(description__icontains=keywords)
+    if 'city' in request.GET:
+        city = request.GET['city']
+        if city:
+            queryset_list=queryset_list.filter(city__icontains=city)
+    if 'county' in request.GET:
+        county = request.GET['county']
+        if county:
+            queryset_list=queryset_list.filter(county__icontains=county)
 
     context = {"price_choices":price_choices,"bedroom_choices":bedroom_choices,"county_choices":county_choices,"listings":queryset_list}
     return render(request,'listings/search.html',context)
