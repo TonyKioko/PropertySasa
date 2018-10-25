@@ -67,40 +67,31 @@
     <div class="container">
       <h2 class="text-center">Our Team</h2>
       <div class="row text-center">
-        <div class="col-md-4">
-          <img src="assets/img/realtors/kyle.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Kyle Brown</h4>
-          <p class="text-success">
-            <i class="fas fa-award text-success mb-3"></i> Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> +254721878183</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> kyle@propertysasa.co.ke</p>
-        </div>
+        {% if realtors %}
+        {% for realtor in realtors%}
+
 
         <div class="col-md-4">
-          <img src="assets/img/realtors/mark.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Mark Hudson</h4>
+          <img src="{{realtor.photo.url}}" alt="" class=" mb-3" height='320' width='4' style="border-radius:50%;">
+          <h4>{{realtor.name}}</h4>
           <p class="text-success">Realtor</p>
           <hr>
           <p>
-            <i class="fas fa-phone"></i> +254721878183</p>
+            <i class="fas fa-phone"></i> +{{realtor.phone}}</p>
           <p>
-            <i class="fas fa-envelope-open"></i> mark@propertysasa.co.ke</p>
+            <i class="fas fa-envelope-open"></i> {{realtor.email}}</p>
         </div>
 
-        <div class="col-md-4">
-          <img src="assets/img/realtors/jenny.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Jenny Johnson</h4>
-          <p class="text-success">Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> +254721878183</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> jenny@propertysasa.co.ke</p>
-        </div>
-      </div>
+
+{% endfor %}
+{% else%}
+
+<div class="col-md-12">
+  <p>  No Realtors Available</p>
+</div>
+
+
+      {% endif %}
     </div>
   </section>
 
