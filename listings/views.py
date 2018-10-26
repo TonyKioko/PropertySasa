@@ -6,7 +6,7 @@ from .choices import *
 # Create your views here.
 def index(request):
     listings = Listing.objects.order_by('-list_date')
-    paginator = Paginator(listings,2)
+    paginator = Paginator(listings,3)
     page = request.GET.get('page')
     paged_listings = paginator.get_page(page)
     context= {"listings":paged_listings}

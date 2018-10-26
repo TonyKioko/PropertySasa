@@ -9,7 +9,7 @@
       <div class="row text-center">
         <div class="col-md-12">
           <h1 class="display-4">Browse Properties</h1>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+          <p class="lead">Whatever your needs and budget, easily find your new home in our range of Kenyan properties</p>
         </div>
       </div>
     </div>
@@ -24,7 +24,7 @@
             <a href="{% url 'index' %}">
               <i class="fas fa-home"></i> Home</a>
           </li>
-          <li class="breadcrumb-item active"> Browse Listings</li>
+          <li class="breadcrumb-item active"> Browse Properties</li>
         </ol>
       </nav>
     </div>
@@ -51,7 +51,7 @@
        <div class="listing-heading text-center">
          <h4 class="text-primary">{{listing.title}}</h4>
          <p>
-           <i class="fas fa-map-marker text-secondary"></i>{{listing.city}} {{listing.county}}</p>
+           <i class="fas fa-map-marker text-secondary"></i> {{listing.city}}</p>
        </div>
        <hr>
        <div class="row py-2 text-secondary">
@@ -85,7 +85,7 @@
  {% endfor %}
 {% else %}
 <div class="col-md-12">
-  <p>No Listings Available</p>
+  <p>No Properties Available</p>
 </div>
 {% endif %}
 
