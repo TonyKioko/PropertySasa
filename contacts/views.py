@@ -1,5 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
+from contacts.models import *
+
 
 # Create your views here.
 
@@ -12,11 +14,11 @@ def contact(request):
         phone=request.POST['phone']
         message=request.POST['message']
         user_id=request.POST['user_id']
-        realtor_email=request.POST['realtor_email']
+        # realtor_email=request.POST['realtor_email']
 
-        contact=Contact(listing=listing,listing_id=listing_id,name=name,email=email,phone=phone,message=message,user_id=user_id,realtor_email=realtor_email)
+        contact=Contact(listing=listing,listing_id=listing_id,name=name,email=email,phone=phone,message=message,user_id=user_id)
         contact.save()
         messages.success(request,'Your request has been submitted, an agent will get back to you soon')
 
-        return redirect('/listing/'+listing_id)
+        return redirect('/listings/'+listing_id)
         # print("HELLO")
