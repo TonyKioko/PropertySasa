@@ -1,4 +1,4 @@
-#!/home/tony/Desktop/PropertySasa/virtual/bin/python
+#!/home/tonni/Desktop/PropertySasa/virtual/bin/python
 from django.core import management
 
 if __name__ == "__main__":

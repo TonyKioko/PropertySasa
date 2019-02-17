@@ -1,5 +1,4 @@
-#!/home/tony/Desktop/PropertySasa/virtual/bin/python
-
+#!/home/tonni/Desktop/PropertySasa/virtual/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
