@@ -1,4 +1,4 @@
-PyAwards
+PropertySasa
 ===================
 ## Description
 [PropertySasa](https://propertysasa.herokuapp.com/) is a web application that seeks to connect property owners with buyers.
@@ -10,7 +10,7 @@ PyAwards
 1. Post Properties.
 2. View all posted properties.
 3. Search for property by Location, Price and City.
-4. Message Property owners
+4. Contact Property owners
 
 ### Live Link ###
 [PropertySasa](https://propertysasa.herokuapp.com/)
